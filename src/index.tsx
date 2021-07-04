@@ -4,9 +4,13 @@ import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+export const Context = React.createContext();
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Wrapper>
+      <App date = {Date.now()}/>
+    </Wrapper>,
   </React.StrictMode>,
   document.getElementById("root")
 );
